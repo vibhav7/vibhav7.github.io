@@ -6,7 +6,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Vibhav's Portfolio</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
      Vibhav
