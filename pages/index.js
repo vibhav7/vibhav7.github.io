@@ -8,7 +8,9 @@ export default function Home() {
         <title>Home</title>
         <link rel="icon" href={"/favicon.ico"} />
       </Head>
-      Coming Soon....
+      <div>
+        <img src="/static/svg/undraw_Nature_fun_re_iney.svg" />
+      </div>
     </div>
   )
 }
