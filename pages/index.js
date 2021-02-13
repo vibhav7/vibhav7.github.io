@@ -6,9 +6,12 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Home</title>
-        <link rel="icon" href={"/favicon.ico"} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
+        <div className="text-center">
+          Coming Soon
+        </div>
         <img src="/static/svg/undraw_Nature_fun_re_iney.svg" />
       </div>
     </div>
