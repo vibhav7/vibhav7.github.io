@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/vibhav7.github.io/favicon.ico" />
+        <link rel="icon" href={process.env.NEXT_PUBLIC_BASE_PATH + "/favicon.ico"} />
       </Head>
       Coming Soon....
     </div>

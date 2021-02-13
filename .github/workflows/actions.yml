@@ -27,7 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build
+      env:
+        NEXT_PUBLIC_BASE_PATH: /vibhav7.github.io
     - run: npm run export
+      env:
+        NEXT_PUBLIC_BASE_PATH: /vibhav7.github.io
     - run: touch ./out/.nojekyll
 
 
