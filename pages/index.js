@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Home</title>
-        <link rel="icon" href={process.env.NEXT_PUBLIC_BASE_PATH + "/favicon.ico"} />
+        <link rel="icon" href={"/favicon.ico"} />
       </Head>
       Coming Soon....
     </div>
