@@ -1,10 +1,11 @@
 import React from 'react';
+import Wrapper from '../components/core/Wrapper';
 
 function ContactUs(props) {
   return (
-    <div>
+    <Wrapper>
       This is ContactUs
-    </div>
+    </Wrapper>
   );
 }
 
