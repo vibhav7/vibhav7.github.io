@@ -6,6 +6,7 @@ export default function LandingPage() {
     <div className="">
       <div className={`${styles.HeroContainerSvg} w-full`}>
         {/* <Trail /> */}
+        <div className="text-center">Coming Soon</div>
         <img className="mx-auto" src="/static/svg/undraw_Nature_fun_re_iney.svg" />
       </div>
     </div>
