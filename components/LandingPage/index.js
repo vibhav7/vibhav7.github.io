@@ -5,8 +5,8 @@ export default function LandingPage() {
   return (
     <div className="">
       <div className={`${styles["hero"]} w-full`}>
-        <div className="text-center">Working</div>
-        <img className="mx-auto" src="/static/svg/undraw_Nature_fun_re_iney.svg" />
+        <div className="text-center">Coming soon</div>
+        <img className="mx-auto opacity-25" src="/static/svg/undraw_developer_activity_bv83.svg" />
         <div className="min-h-screen"></div>
       </div>
     </div>
