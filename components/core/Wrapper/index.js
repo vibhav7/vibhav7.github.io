@@ -10,13 +10,10 @@ function Wrapper({ title, favicon, children }) {
         <link rel="icon" href={favicon || "/favicon.ico"} />
       </Head>
       <div>
+        <Navbar />
         <div>
-          <Navbar />
+          {children}
         </div>
-        {children}
-      </div>
-      <div className="absolute bottom-0 right-0">
-        <Menu label="fun" link="/vibhav"> </Menu>
       </div>
     </div>
   );
