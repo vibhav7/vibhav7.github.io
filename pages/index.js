@@ -1,3 +1,4 @@
+import BackgroundGrid from '../components/core/molecules/BackgroundGrid'
 import Wrapper from '../components/core/Wrapper'
 import LandingPage from '../components/LandingPage'
 
