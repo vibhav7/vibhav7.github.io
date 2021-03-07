@@ -27,43 +27,43 @@ export default function BackgroundGrid() {
   }, [])
   return (
     <div>
-      <div class="relative min-h-screen flex items-center justify-center bg-gray-900">
+      <div class="relative flex items-center justify-center min-h-screen bg-gray-900">
 
-        <div class="grid-background absolute inset-0 p-2 grid grid-cols-12 gap-2 transform -skew-y-12 scale-125">
+        <div class="absolute inset-0 p-2 grid-background grid grid-cols-12 gap-2 transform -skew-y-12 scale-125">
 
-          <div class="col-span-2 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-5 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-1 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-4 bg-gray-500 rounded animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-2 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-5 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-1 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-4 animate-pulse"></div>
 
-          <div class="col-span-5 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-3 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-2 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-2 bg-gray-500 rounded animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-5 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-3 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-2 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-2 animate-pulse"></div>
 
-          <div class="col-span-4 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-7 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-1 bg-gray-500 rounded animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-4 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-7 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-1 animate-pulse"></div>
 
-          <div class="col-span-2 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-4 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-6 bg-gray-500 rounded animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-2 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-4 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-6 animate-pulse"></div>
 
-          <div class="col-span-5 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-5 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-2 bg-gray-500 rounded animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-5 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-5 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-2 animate-pulse"></div>
 
-          <div class="col-span-4 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-7 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-1 bg-gray-500 rounded animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-4 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-7 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-1 animate-pulse"></div>
 
-          <div class="col-span-4 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-7 bg-gray-500 rounded animate-pulse"></div>
-          <div class="col-span-1 bg-gray-500 rounded animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-4 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-7 animate-pulse"></div>
+          <div class="bg-gray-500 rounded col-span-1 animate-pulse"></div>
         </div>
 
         <div class="relative">
-          <h2 class="text-4xl text-white font-extrabold">Welcome <span class="text-purple-500">Grid</span> Background</h2>
+          <h2 class="text-4xl font-extrabold text-white">Welcome <span class="text-purple-500">Grid</span> Background</h2>
         </div>
 
       </div>

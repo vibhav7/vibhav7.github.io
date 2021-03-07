@@ -7,7 +7,6 @@ export default function LandingPage() {
       <div className={`${styles["hero"]} w-full`}>
         <div className="text-center">Coming Soon</div>
         <img className="mx-auto opacity-25" src="/static/png/frontend.png" />
-        {/* <div className="min-h-screen"></div> */}
       </div>
     </div>
   )
