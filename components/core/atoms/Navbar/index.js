@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from './Logo'
 import Menu from './Menu'
 import cn from "classnames"
@@ -26,7 +26,7 @@ const rightMenu = [
 export default function Navbar(props) {
   const { isScroll } = useScroll()
   return (
-    <div className="h-16">
+    <div className="h-16" >
       <div className={cn((!isScroll && styles["hero"]), (isScroll && "shadow-xl"), "h-16 bg-white md:px-32 mx-auto items-center justify-between fixed z-10 top-0 left-0 w-full flex")}>
         <div>
           <Logo />

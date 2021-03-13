@@ -15,6 +15,7 @@ export default function useScroll() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return { isScroll }
