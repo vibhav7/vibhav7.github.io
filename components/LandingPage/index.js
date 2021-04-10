@@ -5,7 +5,7 @@ export default function LandingPage() {
 
   return (
     <div className="">
-      <div className="min-h-screen text-center">Coming Soon</div>
+      <div className="min-h-screen text-center">Working on</div>
     </div >
   )
 }
