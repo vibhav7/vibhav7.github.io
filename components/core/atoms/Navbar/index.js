@@ -26,8 +26,9 @@ const rightMenu = [
 export default function Navbar(props) {
   const { isScroll } = useScroll()
   return (
-    <div className="h-16" >
-      <div className={cn((!isScroll), (isScroll && "shadow-xl"), "h-16 bg-white md:px-32 mx-auto items-center justify-between fixed z-10 top-0 left-0 w-full flex")}>
+    <>
+      <div className="h-16" ></div>
+      <div className={cn((!isScroll), (isScroll && "shadow-xl bg-white"), "h-16 md:px-32 mx-auto items-center justify-between fixed z-10 top-0 left-0 w-full flex")}>
         <div>
           <Logo />
         </div>
@@ -35,6 +36,6 @@ export default function Navbar(props) {
           {rightMenu.map((item, i) => <Menu key={i} {...item} />)}
         </div>
       </div>
-    </div>
+    </>
   )
 }
