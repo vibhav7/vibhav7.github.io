@@ -1,1 +1,1 @@
-this code has been deployed on vibhav.tech
+this code has been deployed on http://vibhav.tech/
