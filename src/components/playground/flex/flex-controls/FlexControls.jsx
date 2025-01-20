@@ -14,12 +14,12 @@ export default function FlexControls({ flexDirection, setFlexDirection, justifyC
                className={`px-4 h-10 py-2 font-medium transition-colors border ${isTailwind ? ' text-white  ' : ' text-gray-700 '}`}>
                {isTailwind ? (
                   <div>
-                     <img src='/src/assets/tailwindcss-logotype.svg' alt='Tailwind CSS Logo' className='w-40' />
+                     <img src='/tailwindcss-logotype.svg' alt='Tailwind CSS Logo' className='w-40' />
                   </div>
                ) : (
                   <>
                      <div className='flex items-center gap-2'>
-                        <img src='/src/assets/css-3.svg' alt='CSS Logo' className='w-4' />
+                        <img src='/css-3.svg' alt='CSS Logo' className='w-4' />
                         <span>Using Normal CSS</span>
                      </div>
                   </>
