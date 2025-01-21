@@ -1,9 +1,10 @@
 import Layout from '@/components/layout/Layout';
+import ComingSoon from '../ui/ComingSoon';
 
 export default function Home() {
    return (
       <Layout>
-         <div>Homepage</div>
+         <ComingSoon />
       </Layout>
    );
 }

@@ -18,6 +18,14 @@ function FlexDemo() {
          </div>
 
          <section className='flex flex-col gap-6 p-4 rounded-lg shadow-sm bg-gray-50'>
+            <FlexControls
+               flexDirection={flexDirection}
+               setFlexDirection={setFlexDirection}
+               justifyContent={justifyContent}
+               setJustifyContent={setJustifyContent}
+               alignItems={alignItems}
+               setAlignItems={setAlignItems}
+            />
             <div
                className='flex gap-3 p-4 transition-all duration-300 bg-white border-2 border-gray-200 rounded-lg min-h-96'
                style={{ flexDirection, justifyContent, alignItems }}>
@@ -34,15 +42,6 @@ function FlexDemo() {
                   </motion.div>
                ))}
             </div>
-
-            <FlexControls
-               flexDirection={flexDirection}
-               setFlexDirection={setFlexDirection}
-               justifyContent={justifyContent}
-               setJustifyContent={setJustifyContent}
-               alignItems={alignItems}
-               setAlignItems={setAlignItems}
-            />
          </section>
       </section>
    );
