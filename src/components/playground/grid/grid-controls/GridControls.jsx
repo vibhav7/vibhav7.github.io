@@ -53,14 +53,6 @@ export default function GridControls({
                ))}
             </SelectControl>
 
-            <SelectControl label='Justify Self' value={justifySelf} onChange={(event) => setJustifySelf(event.target.value)}>
-               {currentJustifySelf.map((item) => (
-                  <option key={item.value} value={item.value}>
-                     {item.label}
-                  </option>
-               ))}
-            </SelectControl>
-
             <SelectControl label='Align Content' value={alignContent} onChange={(event) => setAlignContent(event.target.value)}>
                {currentAlignContent.map((item) => (
                   <option key={item.value} value={item.value}>
@@ -85,13 +77,26 @@ export default function GridControls({
                ))}
             </SelectControl>
 
-            <SelectControl label='Place Self' value={placeSelf} onChange={(event) => setPlaceSelf(event.target.value)}>
-               {currentPlaceSelf.map((item) => (
-                  <option key={item.value} value={item.value}>
-                     {item.label}
-                  </option>
-               ))}
-            </SelectControl>
+            <div>
+               <SelectControl label='Justify Self' value={justifySelf} onChange={(event) => setJustifySelf(event.target.value)}>
+                  {currentJustifySelf.map((item) => (
+                     <option key={item.value} value={item.value}>
+                        {item.label}
+                     </option>
+                  ))}
+               </SelectControl>
+               <div className='text-xs text-gray-500'>Note: This style applies to children elements</div>
+            </div>
+            <div>
+               <SelectControl label='Place Self' value={placeSelf} onChange={(event) => setPlaceSelf(event.target.value)}>
+                  {currentPlaceSelf.map((item) => (
+                     <option key={item.value} value={item.value}>
+                        {item.label}
+                     </option>
+                  ))}
+               </SelectControl>
+               <div className='text-xs text-gray-500 '>Note: This style applies to children elements</div>
+            </div>
          </div>
       </div>
    );

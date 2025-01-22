@@ -45,7 +45,7 @@ export default function Grid() {
             setPlaceSelf={setPlaceSelf}
          />
 
-         <section className='flex flex-col gap-6 p-4 rounded-lg shadow-sm bg-gray-50'>
+         <section className='relative gap-6 rounded-lg shadow-sm bg-gray-50'>
             <div
                className='grid p-4 transition-all duration-300 bg-white border-2 border-gray-200 rounded-lg min-h-96'
                style={{
@@ -58,16 +58,18 @@ export default function Grid() {
                }}>
                {GRID_ITEMS.map((item) => (
                   <motion.div
-                     layout={true}
                      key={item.id}
-                     className='flex items-center justify-center p-4 font-medium text-gray-700 bg-gray-100 rounded-lg'
+                     layout={true}
+                     className='font-medium text-gray-700 bg-gray-100 border rounded-lg'
                      style={{
                         justifySelf: item.id === '001' ? justifySelf : 'auto',
                         placeSelf: item.id === '001' ? placeSelf : 'auto',
                      }}
                      whileHover={{ scale: 1.05 }}
                      whileTap={{ scale: 0.95 }}>
-                     <motion.div layout='position'>{item.label}</motion.div>
+                     <motion.div layout='position' className='p-4'>
+                        {item.label}
+                     </motion.div>
                   </motion.div>
                ))}
             </div>
