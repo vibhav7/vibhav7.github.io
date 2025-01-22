@@ -9,7 +9,7 @@ export default function Playground() {
             <aside className='w-1/4'>
                <PlaygroundSidebar />
             </aside>
-            <main className='grid w-full overflow-auto'>
+            <main id='playground-main' className='grid w-full overflow-auto'>
                <Outlet />
             </main>
          </div>
