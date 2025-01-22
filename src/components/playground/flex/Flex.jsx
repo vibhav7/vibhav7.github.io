@@ -5,7 +5,7 @@ import FlexControls from './flex-controls/FlexControls';
 function FlexDemo() {
    const [flexDirection, setFlexDirection] = React.useState('row');
    const [justifyContent, setJustifyContent] = React.useState('flex-start');
-   const [alignItems, setAlignItems] = React.useState('stretch');
+   const [alignItems, setAlignItems] = React.useState('flex-start');
 
    return (
       <section className='flex flex-col h-full gap-6 p-4 rounded-lg shadow-sm bg-gray-50'>
