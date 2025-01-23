@@ -1,4 +1,5 @@
 import SelectControl from '@/components/ui/SelectControl';
+import TailwindVsCssButton from '@/components/ui/TailwindVsCssButton';
 import React from 'react';
 
 export default function GridControls({
@@ -27,22 +28,7 @@ export default function GridControls({
    return (
       <div className='p-6 space-y-6 bg-white rounded-lg shadow-sm'>
          <div className='mb-2'>
-            <button
-               onClick={() => setIsTailwind(!isTailwind)}
-               className={`px-4 w-[194px] h-10 py-2 font-medium transition-colors border ${isTailwind ? ' text-white  ' : ' text-gray-700 '}`}>
-               {isTailwind ? (
-                  <div>
-                     <img src='/tailwindcss-logotype.svg' alt='Tailwind CSS Logo' className='w-40' />
-                  </div>
-               ) : (
-                  <>
-                     <div className='flex items-center gap-2'>
-                        <img src='/css-3.svg' alt='CSS Logo' className='w-4' />
-                        <span>CSS</span>
-                     </div>
-                  </>
-               )}
-            </button>
+            <TailwindVsCssButton isTailwind={isTailwind} setIsTailwind={setIsTailwind} />
          </div>
          <div className='grid grid-cols-3 gap-6'>
             <SelectControl label='Justify Items' value={justifyItems} onChange={(event) => setJustifyItems(event.target.value)}>

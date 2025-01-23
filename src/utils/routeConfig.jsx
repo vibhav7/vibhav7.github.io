@@ -28,6 +28,13 @@ export const routeConfig = {
             element: <Grid />,
          },
          {
+            id: 'translate',
+            label: 'translate',
+            icon: '🔍',
+            path: 'translate',
+            element: <Translate />,
+         },
+         {
             id: 'position',
             label: 'Position',
             icon: '📍',
@@ -40,13 +47,6 @@ export const routeConfig = {
             icon: '↔️',
             path: 'spacing',
             element: <Spacing />,
-         },
-         {
-            id: 'center',
-            label: 'Center Div (translate)',
-            icon: '🔍',
-            path: 'center',
-            element: <Translate />,
          },
       ],
    },
