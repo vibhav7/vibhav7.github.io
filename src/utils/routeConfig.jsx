@@ -4,6 +4,7 @@ import Position from '@/components/playground/position/Position';
 import Spacing from '@/components/playground/spacing/Spacing';
 import ComingSoon from '@/components/ui/ComingSoon';
 import Translate from '@/components/playground/translate/Translate';
+import ZIndex from '@/components/playground/z-index/ZIndex';
 
 export const ROUTE_BASE = '/playground';
 
@@ -33,6 +34,14 @@ export const routeConfig = {
             icon: '🔍',
             path: 'translate',
             element: <Translate />,
+         },
+         {
+            id: 'z-index',
+            label: 'z-index',
+            icon: '🔍',
+            path: 'z-index',
+            element: <ZIndex />,
+            isWIP: true,
          },
          {
             id: 'position',

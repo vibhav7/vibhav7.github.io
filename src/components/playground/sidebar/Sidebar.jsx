@@ -53,6 +53,7 @@ export function PlaygroundSidebar() {
                                  }`}>
                                  <span className='text-xl'>{item.icon}</span>
                                  <span className='font-medium'>{item.label}</span>
+                                 {item.isWIP && <span className='px-1.5 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded'>WIP</span>}
                               </button>
                            );
                         })}
