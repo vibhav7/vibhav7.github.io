@@ -1,9 +1,12 @@
-export default function ComingSoon() {
+export default function ComingSoon({ title = 'Coming Soon' }) {
    return (
-      <>
-         <div className='flex items-center justify-center h-full pt-16 grow bg-gradient-to-r from-blue-500 to-purple-500'>
-            <div className='p-6 text-4xl font-extrabold text-white rounded-lg shadow-lg'>Coming Soon</div>
+      <div className='flex flex-col items-center justify-center min-h-screen '>
+         <div className='relative'>
+            <div className='absolute inset-0 transform scale-150 -skew-y-12 blur-xl bg-white/20' aria-hidden='true'></div>
+            <div className='relative px-12 py-8 text-center'>
+               <h1 className='text-5xl font-extrabold tracking-tight text-gray-700 underline sm:text-6xl'>{title}</h1>
+            </div>
          </div>
-      </>
+      </div>
    );
 }
