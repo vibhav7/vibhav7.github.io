@@ -6,7 +6,7 @@ import Omnibox from './omnibox/Omnibox';
 import Intent from './report/Intent';
 import Behavior from './report/Behavior';
 
-export default function About() {
+export default function Experience() {
    return (
       <Layout>
          <div className='max-w-5xl pt-20 mx-auto'>
@@ -43,6 +43,12 @@ export default function About() {
                      <div className='p-8 bg-white shadow-sm rounded-xl'>
                         <Intent />
                      </div>
+                     <section className='p-8 bg-white shadow-sm rounded-xl'>
+                        <h3 className='text-xl font-semibold '>Tech Stack</h3>
+                        <p className='text-gray-600 '>
+                           React.js, Event streaming, socket.io, shadcn, tailwindCSS, ESLint, Amcharts, AG-Grid, Highcharts, Nivo.
+                        </p>
+                     </section>
                   </div>
                </div>
 

@@ -114,7 +114,7 @@ export default function References() {
    return (
       <Layout>
          <div className='min-h-screen px-4 pt-20 pb-16 bg-gradient-to-b from-gray-50 to-gray-100 sm:px-6 lg:px-8'>
-            <div className='mx-auto max-w-7xl'>
+            <div className='p-4 mx-auto mt-10 max-w-7xl'>
                <div className='mb-16 text-center'>
                   <h1 className='mb-4 text-4xl font-bold text-gray-900'>References & Resources</h1>
                   <p className='max-w-2xl mx-auto text-lg text-gray-600'>A curated collection of tools, resources, and inspiration.</p>

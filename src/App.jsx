@@ -1,18 +1,18 @@
 import './App.css';
 import { HashRouter, Route, Routes } from 'react-router';
-import About from '@/components/pages/about/About';
 import Playground from '@/components/pages/playground/Playground';
 import Home from '@/components/pages/home/Home';
 import { cssRoutes, javascriptRoutes } from './utils/routes.jsx';
 import Contact from '@/components/pages/contact/Contact';
 import References from './components/pages/references/References';
+import Experience from './components/pages/experience/Experience';
 
 function App() {
    return (
       <HashRouter>
          <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
+            <Route path='/experience' element={<Experience />} />
             <Route path='/references' element={<References />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/playground' element={<Playground />}>

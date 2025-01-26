@@ -4,7 +4,7 @@ const Navbar = () => {
    const location = useLocation(); // Get the current location
    const navItems = [
       { name: 'Home', path: '/' },
-      { name: 'About', path: '/about' },
+      { name: 'Experience', path: '/experience' },
       { name: 'Playground', path: '/playground' },
       { name: 'References', path: '/references' },
       { name: 'Contact', path: '/contact' },
