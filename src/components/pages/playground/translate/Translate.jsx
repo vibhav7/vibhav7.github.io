@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import TranslateControls from '@/components/playground/translate/TranslateControls';
-import CenteredElement from '@/components/playground/translate/CenteredElement';
+import TranslateControls from '@/components/pages/playground/translate/TranslateControls';
+import CenteredElement from '@/components/pages/playground/translate/CenteredElement';
 
 export default function Translate() {
    const [translate, setTranslate] = useState({ x: 0, y: 0 });

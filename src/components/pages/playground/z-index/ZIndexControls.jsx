@@ -1,4 +1,4 @@
-import SelectControl from '../../ui/SelectControl';
+import SelectControl from '../../../ui/SelectControl';
 
 export default function ZIndexControls({ zIndexValues, isolation, onZIndexChange, onIsolationChange }) {
    const isolationOptions = [
@@ -52,7 +52,7 @@ export default function ZIndexControls({ zIndexValues, isolation, onZIndexChange
             </div>
          </div>
 
-         <div>
+         {/* <div>
             <h3 className='mb-4 text-lg font-semibold'>Isolation Property</h3>
             <SelectControl value={isolation} onChange={(value) => onIsolationChange(value)} label='Container Isolation'>
                {isolationOptions.map((option) => (
@@ -64,7 +64,7 @@ export default function ZIndexControls({ zIndexValues, isolation, onZIndexChange
             <p className='mt-2 text-sm text-gray-500'>
                The isolation property creates a new stacking context, affecting how z-index works for child elements.
             </p>
-         </div>
+         </div> */}
       </div>
    );
 }

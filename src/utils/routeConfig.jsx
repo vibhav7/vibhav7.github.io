@@ -1,10 +1,10 @@
-import Flex from '@/components/playground/flex/Flex';
-import Grid from '@/components/playground/grid/Grid';
-import Position from '@/components/playground/position/Position';
-import Spacing from '@/components/playground/spacing/Spacing';
+import Flex from '@/components/pages/playground/flex/Flex';
+import Grid from '@/components/pages/playground/grid/Grid';
+import Position from '@/components/pages/playground/position/Position';
+import Spacing from '@/components/pages/playground/spacing/Spacing';
 import ComingSoon from '@/components/ui/ComingSoon';
-import Translate from '@/components/playground/translate/Translate';
-import ZIndex from '@/components/playground/z-index/ZIndex';
+import Translate from '@/components/pages/playground/translate/Translate';
+import ZIndex from '@/components/pages/playground/z-index/ZIndex';
 
 export const ROUTE_BASE = '/playground';
 

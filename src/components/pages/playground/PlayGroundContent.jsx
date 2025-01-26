@@ -1,11 +1,8 @@
-import Layout from '@/components/layout/Layout';
 import { useContext } from 'react';
-import Flex from '@/components/playground/flex/Flex';
-import Grid from '@/components/playground/grid/Grid';
-import Position from '@/components/playground/position/Position';
-import Spacing from '@/components/playground/spacing/Spacing';
-import { PlaygroundSidebar } from './sidebar/Sidebar';
-import PlaygroundContextProvider from '@/context/playground/PlaygroundContext';
+import Flex from '@/components/pages/playground/flex/Flex';
+import Grid from '@/components/pages/playground/grid/Grid';
+import Position from '@/components/pages/playground/position/Position';
+import Spacing from '@/components/pages/playground/spacing/Spacing';
 import { PlaygroundContext } from '@/context/playground/PlaygroundContext';
 
 export default function PlaygroundContent() {
