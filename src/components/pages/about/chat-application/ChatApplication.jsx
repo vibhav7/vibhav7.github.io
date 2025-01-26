@@ -1,26 +1,7 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import React from 'react';
-import { FaHandPointRight } from 'react-icons/fa';
+import ImageCarousel from '@/components/ui/ImageCarousel';
 
 export default function ChatApplication() {
-   const [api, setApi] = React.useState();
-   const [current, setCurrent] = React.useState(0);
-   const [count, setCount] = React.useState(0);
-
-   React.useEffect(() => {
-      if (!api) {
-         return;
-      }
-
-      setCount(api.scrollSnapList().length);
-      setCurrent(api.selectedScrollSnap() + 1);
-
-      api.on('select', () => {
-         setCurrent(api.selectedScrollSnap() + 1);
-      });
-   }, [api]);
-
-   const imageList = [
+   const carouselItems = [
       {
          title: 'Chat Application',
          description: 'Created a chat application, to converse with AI Twins and Agents.',
@@ -34,31 +15,16 @@ export default function ChatApplication() {
    ];
 
    return (
-      <>
-         <div className='px-8 mx-auto '>
-            <Carousel setApi={setApi} className=''>
-               <CarouselContent>
-                  {imageList.map((item, index) => (
-                     <CarouselItem key={index}>
-                        <div>
-                           <div>
-                              <h3>{item.title}</h3>
-                              <p>{item.description}</p>
-                           </div>
-                           <div className='flex items-center justify-center'>
-                              <img src={item.image} alt={item.description} className='w-full h-auto' />
-                           </div>
-                        </div>
-                     </CarouselItem>
-                  ))}
-               </CarouselContent>
-               <CarouselPrevious />
-               <CarouselNext />
-            </Carousel>
-            <div className='py-2 text-sm text-center text-muted-foreground'>
-               Slide {current} of {count}
-            </div>
+      <section className='px-4 py-12'>
+         <div className='mx-auto max-w-7xl'>
+            {/* <div className='mb-12 text-center'>
+               <h2 className='mb-4 text-3xl font-bold text-primary'>AI Chat Experience</h2>
+               <p className='max-w-2xl mx-auto text-muted-foreground'>
+                  Explore our innovative chat application that enables seamless interaction with AI Twins and Agents.
+               </p>
+            </div> */}
+            <ImageCarousel items={carouselItems} />
          </div>
-      </>
+      </section>
    );
 }

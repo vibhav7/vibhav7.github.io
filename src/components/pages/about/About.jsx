@@ -3,6 +3,8 @@ import ConsumrAILogo from '@/components/ui/ConsumrAILogo';
 import React from 'react';
 import ChatApplication from './chat-application/ChatApplication';
 import Omnibox from './omnibox/Omnibox';
+import Intent from './report/Intent';
+import Behavior from './report/Behavior';
 
 export default function About() {
    return (
@@ -34,6 +36,12 @@ export default function About() {
                      </div>
                      <div className='p-8 bg-white shadow-sm rounded-xl'>
                         <Omnibox />
+                     </div>
+                     <div className='p-8 bg-white shadow-sm rounded-xl'>
+                        <Behavior />
+                     </div>
+                     <div className='p-8 bg-white shadow-sm rounded-xl'>
+                        <Intent />
                      </div>
                   </div>
                </div>
