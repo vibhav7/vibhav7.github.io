@@ -51,7 +51,7 @@ export default function References() {
       //       icon: '💻',
       //    },
       // ],
-      ['Admire']: [
+      ['Follows']: [
          {
             title: 'Maximilian Schwarzmüller',
             description: 'His blog is a great resource for learning React, Next.js, and more.',

@@ -4,7 +4,7 @@ import { Connector } from '@/components/ui/Connector';
 export default function About() {
    return (
       <Layout>
-         <div className='px-10 pt-16'>
+         <div className='px-10 pt-20'>
             <div className='bg-gray-50'>
                {/* <Hero /> */}
                <section className='mt-5'>

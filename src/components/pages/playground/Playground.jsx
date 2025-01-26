@@ -5,7 +5,7 @@ import { PlaygroundSidebar } from './sidebar/Sidebar';
 export default function Playground() {
    return (
       <Layout>
-         <div className='flex h-screen pt-16'>
+         <div className='flex h-screen pt-20'>
             <aside className='w-1/4'>
                <PlaygroundSidebar />
             </aside>

@@ -4,10 +4,10 @@ export default function TailwindVsCssButton({ isTailwind, setIsTailwind }) {
       : 'bg-white text-gray-700 border-gray-200 hover:border-blue-500 hover:text-blue-600 shadow-sm hover:shadow-md';
 
    const logo = isTailwind ? (
-      <img src='/tailwindcss-logotype-white.svg' alt='Tailwind CSS Logo' className='w-40' />
+      <img src='/company-logos/tailwindcss-logotype-white.svg' alt='Tailwind CSS Logo' className='w-40' />
    ) : (
       <>
-         <img src='/css-3.svg' alt='CSS Logo' className='w-4' />
+         <img src='/company-logos/css-3.svg' alt='CSS Logo' className='w-4' />
          <span>CSS</span>
       </>
    );
