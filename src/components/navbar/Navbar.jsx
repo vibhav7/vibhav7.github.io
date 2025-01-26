@@ -11,7 +11,7 @@ const Navbar = () => {
    ];
 
    return (
-      <nav className={`fixed bg-gray-800 top-0 left-0 right-0 z-50 transition-all duration-200 shadow-lg`}>
+      <nav className={`fixed bg-gray-800 top-0 left-0 right-0 z-50 transition-all duration-200 shadow-lg  `}>
          <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
             <div className='flex justify-between h-16'>
                <div className='flex items-center'>

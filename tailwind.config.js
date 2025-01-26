@@ -4,6 +4,16 @@ export default {
    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
    theme: {
       extend: {
+         keyframes: {
+            dash: {
+               to: {
+                  strokeDashoffset: '-16',
+               },
+            },
+         },
+         animation: {
+            dash: 'dash 1s linear infinite',
+         },
          borderRadius: {
             lg: 'var(--radius)',
             md: 'calc(var(--radius) - 2px)',
