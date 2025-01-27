@@ -2,7 +2,7 @@ import './App.css';
 import { HashRouter, Route, Routes } from 'react-router';
 import Playground from '@/components/pages/playground/Playground';
 import Home from '@/components/pages/home/Home';
-import { cssRoutes, javascriptRoutes } from './utils/routes.jsx';
+import { algorithmsRoutes, cssRoutes, javascriptRoutes } from './utils/routes.jsx';
 import Contact from '@/components/pages/contact/Contact';
 import References from './components/pages/references/References';
 import Experience from './components/pages/experience/Experience';
@@ -25,6 +25,11 @@ function App() {
                   </Route>
                   <Route path='javascript'>
                      {javascriptRoutes.map((route) => (
+                        <Route key={route.path} path={route.path} element={route.element} />
+                     ))}
+                  </Route>
+                  <Route path='algorithms'>
+                     {algorithmsRoutes.map((route) => (
                         <Route key={route.path} path={route.path} element={route.element} />
                      ))}
                   </Route>

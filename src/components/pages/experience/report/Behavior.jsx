@@ -5,27 +5,27 @@ export default function Behavior() {
    const carouselItems = [
       {
          title: 'Behavior Report',
-         description: 'Based on the keyword, It will show the report',
+         description: 'Based on the audience selected, It will show the report',
          image: '/consumr-ai/behavior/report-behavior.png',
       },
       {
-         title: 'Consumer Mindset',
-         description: 'What the consumer is thinking about the product or service',
+         title: 'Brands & Devices',
+         description: 'What are the brands and devices that the audience is using',
          image: '/consumr-ai/behavior/report-behavior-btc.png',
       },
       {
-         title: 'Trending keywords',
-         description: 'Based on the keyword, It will highlight the trending keywords around that keyword and the volume of the keywords',
+         title: 'Work & Education',
+         description: 'What are the work and education of the audience',
          image: '/consumr-ai/behavior/report-behavior-wnt.png',
       },
       {
-         title: 'Trending keywords',
-         description: 'Based on the keyword, It will highlight the trending keywords around that keyword and the volume of the keywords',
+         title: 'Interest',
+         description: 'What are the interest of the audience',
          image: '/consumr-ai/behavior/report-behavior-interest.png',
       },
       {
-         title: 'Trending keywords',
-         description: 'Based on the keyword, It will highlight the trending keywords around that keyword and the volume of the keywords',
+         title: 'Country & City',
+         description: 'What are the country and city that the audience is from',
          image: '/consumr-ai/behavior/report-behavior-country-city.png',
       },
    ];

@@ -4,7 +4,8 @@ import { routeConfig } from '@/utils/routeConfig.jsx';
 
 const sidebarItems = [
    { id: 'css', label: 'CSS', items: routeConfig.css.routes },
-   { id: 'js', label: 'JavaScript', items: routeConfig.javascript.routes },
+   { id: 'javascript', label: 'JavaScript', items: routeConfig.javascript.routes },
+   { id: 'algorithms', label: 'Algorithms', items: routeConfig.algorithms.routes },
 ];
 
 export function PlaygroundSidebar() {
@@ -43,11 +44,15 @@ export function PlaygroundSidebar() {
                   {expandedSections.has(section.id) && (
                      <div className='ml-4 space-y-1'>
                         {section.items.map((item) => {
-                           const fullPath = `${routeConfig[section.id === 'js' ? 'javascript' : 'css'].path}/${item.path}`;
+                           console.log(item);
+                           // return null;
+                           const itemPath = item.path || '';
+                           const sectionPath = routeConfig[section.id].path;
+                           const fullPath = `${sectionPath}/${itemPath}`;
                            return (
                               <button
                                  key={item.id}
-                                 onClick={() => handlePanelChange(routeConfig[section.id === 'js' ? 'javascript' : 'css'].path, item.path)}
+                                 onClick={() => handlePanelChange(sectionPath, itemPath)}
                                  className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg transition-all duration-200 ${
                                     location.pathname === fullPath ? 'bg-blue-500 text-white shadow-md' : 'text-gray-600 hover:bg-gray-100'
                                  }`}>

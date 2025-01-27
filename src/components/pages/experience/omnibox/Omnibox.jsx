@@ -15,12 +15,12 @@ export default function Omnibox() {
       },
       {
          title: '3rd party',
-         description: 'It suggest recommendation based on the organization selected and what the user is searching for.',
+         description: 'It suggest 3rd party recommendation based on the organization selected and what the user is searching for.',
          image: '/consumr-ai/omnibox/omnibox-3rd-party.png',
       },
       {
          title: 'Keyword',
-         description: 'It suggest recommendation based on the organization selected and what the user is searching for.',
+         description: 'It suggest keyword recommendation based on the organization selected and what the user is searching for.',
          image: '/consumr-ai/omnibox/omnibox-keyword.png',
       },
    ];
