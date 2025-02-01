@@ -5,7 +5,7 @@ import Spacing from '@/components/pages/playground/spacing/Spacing';
 import ComingSoon from '@/components/ui/ComingSoon';
 import Translate from '@/components/pages/playground/translate/Translate';
 import ZIndex from '@/components/pages/playground/z-index/ZIndex';
-import Algorithms from '@/components/pages/playground/algorithms/Algorithms';
+import BasicAlgorithm from '@/components/pages/playground/algorithms/basic/BasicAlgorithm';
 
 export const ROUTE_BASE = '/playground';
 
@@ -105,7 +105,7 @@ export const routeConfig = {
             label: 'Algorithm Basics',
             icon: '📚',
             path: 'basics',
-            element: <Algorithms />,
+            element: <BasicAlgorithm />,
             isWIP: true,
          },
          {
