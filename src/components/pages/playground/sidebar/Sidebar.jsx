@@ -44,8 +44,6 @@ export function PlaygroundSidebar() {
                   {expandedSections.has(section.id) && (
                      <div className='ml-4 space-y-1'>
                         {section.items.map((item) => {
-                           console.log(item);
-                           // return null;
                            const itemPath = item.path || '';
                            const sectionPath = routeConfig[section.id].path;
                            const fullPath = `${sectionPath}/${itemPath}`;
