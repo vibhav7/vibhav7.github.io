@@ -2,16 +2,42 @@ export default function CalculationHistory({ history }) {
    if (history.length === 0) return null;
 
    return (
-      <div className='mt-4'>
-         <h4 className='text-sm font-semibold text-gray-700 mb-2'>Calculation History</h4>
-         <div className='space-y-2'>
+      <div className='mt-6'>
+         <div className='flex items-center gap-2 mb-3'>
+            <h4 className='text-sm font-semibold text-gray-700'>Calculation History</h4>
+            <span className='px-2 py-0.5 text-xs font-medium text-gray-500 bg-gray-100 rounded-full'>{history.length} entries</span>
+         </div>
+
+         <div className='space-y-3'>
             {history.map((entry, index) => (
-               <div key={index} className='bg-gray-50 p-2 rounded-md'>
-                  <div className='flex justify-between text-sm'>
-                     <span className='text-gray-600'>Input: {entry.input}</span>
-                     <span className='text-gray-600'>Result: {entry.result}</span>
+               <div key={index} className='p-3 transition-all duration-200 bg-white border rounded-lg hover:shadow-sm'>
+                  <div className='flex flex-col gap-2 sm:flex-row sm:justify-between'>
+                     <div className='flex items-center gap-2'>
+                        <span className='px-2 py-1 text-xs font-medium text-gray-500 bg-gray-100 rounded'>#{history.length - index}</span>
+                        <span className='text-sm text-gray-700'>
+                           Input: <span className='font-medium'>{entry.input}</span>
+                        </span>
+                     </div>
+                     <span className='text-sm text-gray-700'>
+                        Result: <span className='font-medium text-emerald-600'>{entry.result}</span>
+                     </span>
                   </div>
-                  <div className='text-xs text-gray-500'>Time taken: {entry.timeTaken} milliseconds</div>
+
+                  <div className='flex items-center gap-2 mt-2 text-xs text-gray-500'>
+                     <svg
+                        className='w-4 h-4 text-gray-400'
+                        fill='none'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth='2'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'>
+                        <path d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                     </svg>
+                     <span>
+                        Processed in <span className='font-medium text-blue-600'>{entry.timeTaken}</span> ms
+                     </span>
+                  </div>
                </div>
             ))}
          </div>

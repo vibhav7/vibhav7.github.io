@@ -1,6 +1,8 @@
-export default function Card({ children, ...rest }) {
+import { cn } from '@/lib/utils';
+
+export default function Card({ className, children, ...rest }) {
    return (
-      <div className='p-4 bg-white rounded-lg shadow-md' {...rest}>
+      <div className={cn('p-4 bg-white rounded-lg shadow-md', className)} {...rest}>
          {children}
       </div>
    );
