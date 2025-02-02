@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import useHighlightCode from '@/hooks/playground/useHighlightCode';
-import { sumUpToNUsingFor, sumUpToNUsingMath } from '@/lib/algorithm/basics';
+import { sumUpToNUsingFor, sumUpToNUsingMath, stringSumUpToNUsingFor, stringSumUpToNUsingMath } from '@/lib/algorithm/basics';
 
 import AlgorithmCard from './AlgorithmCard';
 
@@ -9,8 +9,8 @@ export default function BasicAlgorithm() {
    const { highlightedCode: highlightedCodeSumUpToNUsingMath, highlight: highlightSumUpToNUsingMath } = useHighlightCode();
 
    useEffect(() => {
-      highlightSumUpToNUsingFor(sumUpToNUsingFor.toString());
-      highlightSumUpToNUsingMath(sumUpToNUsingMath.toString());
+      highlightSumUpToNUsingFor(stringSumUpToNUsingFor);
+      highlightSumUpToNUsingMath(stringSumUpToNUsingMath);
    }, []);
 
    return (
@@ -25,18 +25,18 @@ export default function BasicAlgorithm() {
             <h2 className='mb-2 text-lg font-semibold'>Example Algorithm: Sum up to N</h2>
             <section className='grid grid-cols-2 gap-4'>
                <AlgorithmCard
-                  title='Sum Up To N (Using Math)'
-                  description='Calculates sum of numbers from 1 to N using mathematical formula'
-                  highlightedCode={highlightedCodeSumUpToNUsingMath}
-                  algorithmFn={sumUpToNUsingMath}
-                  inputLabel='N'
-               />
-
-               <AlgorithmCard
                   title='Sum Up To N (Using Loop)'
                   description='Calculates sum of numbers from 1 to N using for loop'
                   highlightedCode={highlightedCodeSumUpToNUsingFor}
                   algorithmFn={sumUpToNUsingFor}
+                  inputLabel='N'
+                  showWarning={true}
+               />
+               <AlgorithmCard
+                  title='Sum Up To N (Using Math)'
+                  description='Calculates sum of numbers from 1 to N using mathematical formula'
+                  highlightedCode={highlightedCodeSumUpToNUsingMath}
+                  algorithmFn={sumUpToNUsingMath}
                   inputLabel='N'
                />
             </section>
