@@ -16,6 +16,8 @@ const ALGORITHMS = [
       algorithmFn: sumUpToNUsingFor,
       codeString: stringSumUpToNUsingFor,
       showWarning: true,
+      timeComplexity: 'O(n)',
+      tooltip: 'Time complexity O(n) means the execution time increases linearly with the input size.',
    },
    {
       id: 'math',
@@ -23,6 +25,8 @@ const ALGORITHMS = [
       description: 'Calculates sum of numbers from 1 to N using mathematical formula',
       algorithmFn: sumUpToNUsingMath,
       codeString: stringSumUpToNUsingMath,
+      timeComplexity: 'O(1)',
+      tooltip: 'Time complexity O(1) means the execution time is constant and does not change with the input size.',
    },
 ];
 
@@ -46,6 +50,8 @@ export default function BasicAlgorithm() {
       });
    };
 
+   const showWarning = input > 1000000;
+
    return (
       <div className='p-6 space-y-6'>
          <header>
@@ -65,15 +71,17 @@ export default function BasicAlgorithm() {
                      title={algo.title}
                      description={algo.description}
                      highlightedCode={highlightedCodes[index].highlightedCode}
-                     showWarning={algo.showWarning}
+                     showWarning={showWarning}
                      input={input}
                      setInput={setInput}
+                     timeComplexity={algo.timeComplexity}
+                     tooltip={algo.tooltip}
                      algorithmState={algorithmStates[index]}
                   />
                ))}
 
                <Card className='col-span-2'>
-                  <AlgorithmInput input={input} setInput={setInput} onCalculate={handleCalculate} showWarning={input > 1000000} />
+                  <AlgorithmInput input={input} setInput={setInput} onCalculate={handleCalculate} showWarning={showWarning} />
                </Card>
 
                {algorithmStates.map((state, index) => {
