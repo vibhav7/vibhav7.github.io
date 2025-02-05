@@ -1,7 +1,14 @@
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 
-export default function AlgorithmInput({ input, setInput, onCalculate, showWarning, maxValue = 1000000 }) {
+export default function AlgorithmInput({
+   input,
+   setInput,
+   onCalculate,
+   showWarning,
+   maxValue = 1000000,
+   message = `1 → 10 → 100 → 1,000 → 10,000 → 100,000 → 1,000,000`,
+}) {
    return (
       <div className='max-w-3xl mx-auto space-y-4'>
          <div className='flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-3'>
@@ -42,7 +49,7 @@ export default function AlgorithmInput({ input, setInput, onCalculate, showWarni
                   <p className='text-sm text-gray-600'>
                      Try increasing one digit at a time to compare algorithm performance:
                      <br />
-                     <span className='font-mono text-gray-500'>1 → 10 → 100 → 1,000 → 10,000 → 100,000 → 1,000,000</span>
+                     <span className='font-mono text-gray-500'>{message}</span>
                   </p>
                </div>
             )}

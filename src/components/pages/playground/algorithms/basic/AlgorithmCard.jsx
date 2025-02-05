@@ -1,7 +1,7 @@
 import HighlightedCode from './HighlightedCode';
 
 export default function AlgorithmCard({ title = '', highlightedCode, description, algorithmState, timeComplexity, tooltip, showWarning }) {
-   const { result, timeTaken, history } = algorithmState;
+   const { result, timeTaken, iterations, history } = algorithmState;
 
    return (
       <section className='flex flex-col justify-between gap-6 p-6 transition-shadow bg-white border border-gray-200 shadow-sm rounded-xl hover:shadow-md'>
@@ -17,11 +17,14 @@ export default function AlgorithmCard({ title = '', highlightedCode, description
          <div className='space-y-4'>
             {result !== null && (
                <div className='p-4 space-y-2 rounded-lg bg-blue-50'>
-                  <p className='text-gray-700'>
-                     Last Result: <span className='text-sm text-gray-700'>{result}</span>
+                  <p className='text-xs text-gray-500'>
+                     Last Result: <span className='text-gray-700'>{result}</span>
                   </p>
                   <p className='text-sm text-gray-600'>
                      Time taken: <span className='font-medium text-blue-700'>{timeTaken}</span> milliseconds
+                  </p>
+                  <p className='text-sm text-gray-600'>
+                     Iterations: <span className='font-medium text-blue-700'>{iterations}</span>
                   </p>
                </div>
             )}

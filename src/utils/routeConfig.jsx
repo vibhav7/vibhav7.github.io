@@ -6,6 +6,7 @@ import ComingSoon from '@/components/ui/ComingSoon';
 import Translate from '@/components/pages/playground/translate/Translate';
 import ZIndex from '@/components/pages/playground/z-index/ZIndex';
 import BasicAlgorithm from '@/components/pages/playground/algorithms/basic/BasicAlgorithm';
+import MathSeries from '@/components/pages/playground/algorithms/math-series/MathSeries';
 
 export const ROUTE_BASE = '/playground';
 
@@ -50,6 +51,7 @@ export const routeConfig = {
             icon: '📍',
             path: 'position',
             element: <Position />,
+            isNotStarted: true,
          },
          {
             id: 'spacing',
@@ -57,6 +59,7 @@ export const routeConfig = {
             icon: '↔️',
             path: 'spacing',
             element: <Spacing />,
+            isNotStarted: true,
          },
       ],
    },
@@ -71,6 +74,7 @@ export const routeConfig = {
             icon: '🔍',
             path: 'scope',
             element: <ComingSoon />,
+            isNotStarted: true,
          },
          {
             id: 'closure',
@@ -78,6 +82,7 @@ export const routeConfig = {
             icon: '🔒',
             path: 'closure',
             element: <ComingSoon />,
+            isNotStarted: true,
          },
          {
             id: 'hoisting',
@@ -85,6 +90,7 @@ export const routeConfig = {
             icon: '⬆️',
             path: 'hoisting',
             element: <ComingSoon />,
+            isNotStarted: true,
          },
          {
             id: 'this',
@@ -92,6 +98,7 @@ export const routeConfig = {
             icon: '👉',
             path: 'this',
             element: <ComingSoon />,
+            isNotStarted: true,
          },
       ],
    },
@@ -106,14 +113,15 @@ export const routeConfig = {
             icon: '📚',
             path: 'basics',
             element: <BasicAlgorithm />,
-            isWIP: true,
+            // isWIP: true,
          },
          {
-            id: 'searching',
-            label: 'Searching',
+            id: 'math-series',
+            label: 'Math Series',
             icon: '🔍',
-            path: 'searching',
-            element: <ComingSoon />,
+            path: 'math-series',
+            element: <MathSeries />,
+            isWIP: true,
          },
          {
             id: 'sorting',
@@ -121,6 +129,7 @@ export const routeConfig = {
             icon: '📊',
             path: 'sorting',
             element: <ComingSoon />,
+            isNotStarted: true,
          },
          {
             id: 'recursion',
@@ -128,6 +137,7 @@ export const routeConfig = {
             icon: '🔄',
             path: 'recursion',
             element: <ComingSoon />,
+            isNotStarted: true,
          },
       ],
    },

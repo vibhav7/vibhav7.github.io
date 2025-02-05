@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { routeConfig } from '@/utils/routeConfig.jsx';
+import { Tooltip } from '@/components/ui/Tooltip';
 
 const sidebarItems = [
    { id: 'css', label: 'CSS', items: routeConfig.css.routes },
@@ -30,7 +31,7 @@ export function PlaygroundSidebar() {
    };
 
    return (
-      <div className='h-full p-4 border-r border-gray-200 bg-gray-50'>
+      <div className='h-[calc(100vh-80px)] overflow-auto p-4 border-r border-gray-200 bg-gray-50'>
          <h2 className='mb-6 text-xl font-semibold text-gray-800'>Layout Playground</h2>
          <nav className='space-y-2'>
             {sidebarItems.map((section) => (
@@ -55,8 +56,20 @@ export function PlaygroundSidebar() {
                                     location.pathname === fullPath ? 'bg-blue-500 text-white shadow-md' : 'text-gray-600 hover:bg-gray-100'
                                  }`}>
                                  <span className='text-xl'>{item.icon}</span>
-                                 <span className='font-medium'>{item.label}</span>
-                                 {item.isWIP && <span className='px-1.5 py-0.5 text-xs font-medium bg-yellow-100 text-yellow-800 rounded'>WIP</span>}
+                                 <div className='flex items-center gap-2'>
+                                    <span className='font-medium whitespace-nowrap'>{item.label}</span>
+                                    {(item.isWIP || item.isNotStarted) && (
+                                       <Tooltip content={item.isWIP ? 'In Progress' : 'Not Started'}>
+                                          <div
+                                             className={`h-2 w-2 rounded-full ${
+                                                item.isWIP
+                                                   ? 'bg-gradient-to-r from-yellow-400 to-orange-400 animate-pulse'
+                                                   : 'bg-gradient-to-r from-red-400 to-pink-400'
+                                             }`}
+                                          />
+                                       </Tooltip>
+                                    )}
+                                 </div>
                               </button>
                            );
                         })}

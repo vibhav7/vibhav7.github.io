@@ -1,6 +1,7 @@
 export default function CalculationHistory({ history }) {
    if (history.length === 0) return null;
 
+   console.log(history);
    return (
       <div className='mt-6'>
          <div className='flex items-center gap-2 mb-3'>
@@ -18,25 +19,42 @@ export default function CalculationHistory({ history }) {
                            Input: <span className='font-medium'>{entry.input}</span>
                         </span>
                      </div>
-                     <span className='text-sm text-gray-700'>
-                        Result: <span className='font-medium text-emerald-600'>{entry.result}</span>
+                     <span className='text-xs text-gray-700'>
+                        Result: <span className=''>{entry.result}</span>
                      </span>
                   </div>
 
-                  <div className='flex items-center gap-2 mt-2 text-xs text-gray-500'>
-                     <svg
-                        className='w-4 h-4 text-gray-400'
-                        fill='none'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'>
-                        <path d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'></path>
-                     </svg>
-                     <span>
-                        Processed in <span className='font-medium text-blue-600'>{entry.timeTaken}</span> ms
-                     </span>
+                  <div className='flex items-center gap-4 mt-2 text-xs text-gray-500'>
+                     <div className='flex items-center gap-2'>
+                        <svg
+                           className='w-4 h-4 text-gray-400'
+                           fill='none'
+                           strokeLinecap='round'
+                           strokeLinejoin='round'
+                           strokeWidth='2'
+                           viewBox='0 0 24 24'
+                           stroke='currentColor'>
+                           <path d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                        </svg>
+                        <span>
+                           Time: <span className='font-medium text-blue-600'>{entry.timeTaken}</span> ms
+                        </span>
+                     </div>
+                     <div className='flex items-center gap-2'>
+                        <svg
+                           className='w-4 h-4 text-gray-400'
+                           fill='none'
+                           strokeLinecap='round'
+                           strokeLinejoin='round'
+                           strokeWidth='2'
+                           viewBox='0 0 24 24'
+                           stroke='currentColor'>
+                           <path d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'></path>
+                        </svg>
+                        <span>
+                           Iterations: <span className='text-base font-medium text-blue-600'>{entry.iterations}</span>
+                        </span>
+                     </div>
                   </div>
                </div>
             ))}

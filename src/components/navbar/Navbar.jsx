@@ -31,13 +31,19 @@ const Navbar = () => {
                            to={item.path}
                            className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ease-in-out
                               ${
-                                 location.pathname === item.path
+                                 item.path === '/' && location.pathname === '/'
+                                    ? 'text-indigo-700 bg-indigo-50/50 shadow-sm'
+                                    : item.path !== '/' && location.pathname.startsWith(item.path)
                                     ? 'text-indigo-700 bg-indigo-50/50 shadow-sm'
                                     : 'text-gray-600 hover:text-indigo-600 hover:bg-gray-50/50'
                               }
                               before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:origin-right before:scale-x-0 before:bg-indigo-500
                               before:transition-transform before:duration-300 before:ease-in-out
-                              ${location.pathname === item.path ? 'before:scale-x-100' : 'hover:before:origin-left hover:before:scale-x-100'}
+                              ${
+                                 (item.path === '/' && location.pathname === '/') || (item.path !== '/' && location.pathname.startsWith(item.path))
+                                    ? 'before:scale-x-100'
+                                    : 'hover:before:origin-left hover:before:scale-x-100'
+                              }
                            `}>
                            {item.name}
                         </Link>
